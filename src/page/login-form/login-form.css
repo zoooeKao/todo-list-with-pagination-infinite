@@ -1,0 +1,40 @@
+.login {
+  height: calc(100vh - 50px);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login--aquamarine {
+  background-color: rgb(163, 239, 214);
+}
+.login__container {
+  width: 75%;
+  padding: 40px 28px;
+  background-color: var(--color-theme2);
+}
+.login__error {
+  color: red;
+}
+.login__label {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: 18px;
+  font-size: 18px;
+}
+.login__label > input {
+  width: 100%;
+  padding: 4px;
+  font-size: 14px;
+}
+.login__btnWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 16px;
+}
+.login__btn {
+  width: 60px;
+  font-size: 16px;
+}/*# sourceMappingURL=login-form.css.map */

@@ -1,0 +1,51 @@
+.navbar {
+  position: sticky;
+  height: 50px;
+  width: 100%;
+  background-color: var(--color-theme1);
+
+  &__container {
+    width: 100%;
+    padding: 0 26px;
+  }
+
+  &__layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+
+    @include desktop {
+      margin-right: 20px;
+    }
+  }
+
+  &__greeting {
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  &__logout {
+    font-size: 20px;
+    border: none;
+    background-color: var(--color-theme1);
+    padding: 10px 8px;
+  }
+}

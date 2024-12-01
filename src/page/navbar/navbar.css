@@ -1,0 +1,30 @@
+.navbar {
+  position: sticky;
+  height: 50px;
+  width: 100%;
+  background-color: var(--color-theme1);
+}
+.navbar__container {
+  width: 100%;
+  padding: 0 26px;
+}
+.navbar__layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.navbar__greeting {
+  margin-left: 5px;
+  font-size: 20px;
+}
+.navbar__logout {
+  font-size: 20px;
+  border: none;
+  background-color: var(--color-theme1);
+  padding: 10px 8px;
+}/*# sourceMappingURL=navbar.css.map */

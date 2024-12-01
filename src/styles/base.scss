@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+// 定義字體
+body {
+  font-style: var(--primary-font);
+}
+
+h1 {
+  font-size: 34px;
+  margin-bottom: 8px;
+  text-align: center;
+}

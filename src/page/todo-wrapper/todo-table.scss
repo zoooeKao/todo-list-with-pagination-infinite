@@ -1,0 +1,186 @@
+.todo-table {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - $navbar-height);
+
+  &--aquamarine {
+    background-color: rgb(163, 239, 214);
+  }
+
+  &__container {
+    width: 85%;
+    height: 70%;
+    padding: 40px 25px;
+    background-color: var(--color-theme2);
+
+    @include tablet {
+      width: 50%;
+    }
+
+    @include desktop {
+      width: 33.3333%;
+    }
+  }
+}
+
+.form-todoAdd {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 25px;
+  width: 100%;
+
+  &__input {
+    width: 80%;
+    padding: 15px 6px;
+    font-size: 16px;
+    height: 25px;
+  }
+
+  &__btn {
+    width: 20%;
+    height: 25px;
+
+    // 字體垂直置中
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    font-size: 16px;
+  }
+
+  &__check {
+    font-size: 26px;
+    height: 25px;
+  }
+}
+
+.form-todoStatus {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+
+  &__left {
+    display: flex;
+    gap: 6px;
+  }
+}
+
+.btn-status {
+  padding: 2px 8px;
+  font-size: 14px;
+  border-radius: 20%;
+
+  @include tablet {
+    padding: 4px 10px;
+  }
+
+  &--on {
+    background-color: rgb(163, 239, 214);
+  }
+}
+
+.todoLists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // Question: 為什麼設了 align 後會 overflow
+  // align-items: center;
+  // align-content: flex-start;
+  align-items: center;
+  // justify-content: center;
+  width: 100%;
+  height: 60%;
+  // overflow: auto;
+  overflow-y: scroll;
+
+  @include tablet {
+    height: 60%;
+    margin-top: 50px;
+  }
+
+  &__nothing,
+  &__loading {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.todoItem {
+  width: 100%;
+  height: 12%;
+  display: flex;
+  margin-bottom: 10px;
+
+  &__checked {
+    flex-grow: 1;
+    width: 5%;
+  }
+
+  &__main {
+    flex-grow: 3;
+    width: 90%;
+    display: flex;
+  }
+
+  &__todo {
+    width: 60%;
+    font-size: 14px;
+    padding: 4px 2px;
+  }
+
+  &__btns {
+    width: 40%;
+    display: flex;
+  }
+
+  &__btn {
+    width: 50%;
+    font-size: 12px;
+
+    @include tablet {
+      font-size: 14px;
+    }
+  }
+}
+
+.todoItemCard {
+  width: 100%;
+  display: flex;
+  margin-bottom: 14px;
+  gap: 10px;
+  align-items: center;
+
+  @include desktop {
+    width: 50%;
+    height: 25%;
+  }
+
+  &__checked {
+    flex-grow: 1;
+    width: 5%;
+  }
+
+  &__main {
+    flex-grow: 3;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__todo {
+    font-size: 16px;
+    height: 36px;
+  }
+
+  &__btns {
+    width: 100%;
+  }
+
+  &__btn {
+    width: 50%;
+    height: 24px;
+  }
+}

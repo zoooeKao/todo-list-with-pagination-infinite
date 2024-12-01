@@ -1,0 +1,51 @@
+.login {
+  height: calc(100vh - $navbar-height);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--aquamarine {
+    background-color: rgb(163, 239, 214);
+  }
+
+  &__container {
+    width: 75%;
+    padding: 40px 28px;
+    background-color: var(--color-theme2);
+
+    @include desktop {
+      width: 33.33333%;
+    }
+  }
+
+  &__error {
+    color: red;
+  }
+
+  &__label {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 18px;
+    font-size: 18px;
+
+    & > input {
+      width: 100%;
+      padding: 4px;
+      font-size: 14px;
+    }
+  }
+
+  &__btnWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 16px;
+  }
+
+  &__btn {
+    width: 60px;
+    font-size: 16px;
+  }
+}

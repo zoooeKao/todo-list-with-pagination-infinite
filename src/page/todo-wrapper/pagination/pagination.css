@@ -1,0 +1,33 @@
+.pg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.pg__ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.pg__li {
+  padding: 6px;
+}
+.pg__btn {
+  border-width: 0.5px;
+  padding: 6px 6px;
+  border-radius: 4px;
+}
+.pg__btn--on {
+  background-color: rgba(29, 39, 52, 0.4);
+}
+.pg__previous {
+  margin-right: 4px;
+}
+.pg__next {
+  margin-left: 4px;
+}
+.pg__btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}/*# sourceMappingURL=pagination.css.map */

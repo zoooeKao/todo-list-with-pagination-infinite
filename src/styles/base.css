@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-style: var(--primary-font);
+}
+
+h1 {
+  font-size: 34px;
+  margin-bottom: 8px;
+  text-align: center;
+}/*# sourceMappingURL=base.css.map */

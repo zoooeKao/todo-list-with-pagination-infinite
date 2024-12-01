@@ -1,0 +1,8 @@
+- status = submitting
+  - yes
+    - set status to submitting
+    - post
+    - setTodoList
+    - update UI
+  - no
+    -

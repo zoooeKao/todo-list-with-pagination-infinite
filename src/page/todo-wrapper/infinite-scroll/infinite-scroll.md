@@ -1,0 +1,12 @@
+- on scroll
+  - status = loading
+    - no
+      - is going to fetch more data (check hasMore + scroll height)
+        - no
+          - end
+        - yes
+          - set the status to loading
+          - start fetch the data
+          - end
+    - yes
+      - end
