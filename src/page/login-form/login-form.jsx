@@ -1,17 +1,17 @@
 // @ts-check
-import React, { useContext, useState } from 'react';
-import { ThemeContext } from '../../model/app/context';
-import { getProfile } from '../../service/get-profile';
-import { login } from '../../service/login';
+import React, {useContext, useState} from 'react';
+import {ThemeContext} from '../../model/app/context';
+import {getProfile} from '../../service/get-profile';
+import {login} from '../../service/login';
 import './login-form.scss';
-import { TextInput } from './text-input';
+import {TextInput} from './text-input';
 
 const getLocalStorageUsername = localStorage.getItem('username');
 
 /** @param {Object} param0 登入成功要取得 onLogin
  * @param {(param: import('../../model/app/content-state').ProfileState) => void} param0.onProfileState
  */
-export function LoginForm({ onProfileState }) {
+export function LoginForm({onProfileState}) {
   const [username, setUsername] = useState(getLocalStorageUsername || 'emilys');
   const [password, setPassword] = useState('emilyspass');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -21,18 +21,18 @@ export function LoginForm({ onProfileState }) {
   const theme = useContext(ThemeContext);
 
   /** @type {React.FormEventHandler<HTMLFormElement>} */
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     login(username, password)
       .then(() => {
         return getProfile();
       })
-      .then(profile => {
-        onProfileState({ status: 'logged-in', username: profile.username, id: profile.id });
+      .then((profile) => {
+        onProfileState({status: 'logged-in', username: profile.username, id: profile.id});
         remember ? localStorage.setItem('username', username) : localStorage.removeItem('username');
       })
-      .catch(errMsg => {
+      .catch((errMsg) => {
         setHasError(true);
         setUsername('');
         setPassword('');
@@ -55,16 +55,18 @@ export function LoginForm({ onProfileState }) {
   };
 
   return (
-    <form className={`login login--${theme}`} onSubmit={handleSubmit}>
-      <div className="login__container">
-        <h1 className="title">Login</h1>
-        {hasError && <div className="login__error">please register first!</div>}
+    <form
+      className={`login login--${theme}`}
+      onSubmit={handleSubmit}>
+      <div className='login__container'>
+        <h1 className='title'>Login</h1>
+        {hasError && <div className='login__error'>please register first!</div>}
         <TextInput>
           <span>username:</span>
           <input
-            type="text"
-            value={username}
-            onChange={e => setUsername(e.target.value)}
+            type='text'
+            defaultValue={username}
+            onChange={(e) => setUsername(e.target.value)}
             required
             readOnly={isSubmitting}
             autoFocus
@@ -74,25 +76,40 @@ export function LoginForm({ onProfileState }) {
           <span>password:</span>
           <input
             type={showPassword ? 'text' : 'password'}
-            value={password}
-            onChange={e => setPassword(e.target.value)}
+            defaultValue={password}
+            onChange={(e) => setPassword(e.target.value)}
             readOnly={isSubmitting}
           />
         </TextInput>
         <label>
-          <input type="checkbox" checked={remember} onChange={() => setRemember(!remember)} />
+          <input
+            type='checkbox'
+            checked={remember}
+            onChange={() => setRemember(!remember)}
+          />
           remember me
         </label>
         <br />
         <label>
-          <input type="checkbox" checked={showPassword} onChange={() => setShowPassword(!showPassword)} />
+          <input
+            type='checkbox'
+            checked={showPassword}
+            onChange={() => setShowPassword(!showPassword)}
+          />
           show password
         </label>
-        <div className="login__btnWrapper">
-          <button className="login__btn" type="submit" disabled={isSubmitting}>
+        <div className='login__btnWrapper'>
+          <button
+            className='login__btn'
+            type='submit'
+            disabled={isSubmitting}>
             submit
           </button>
-          <button className="login__btn" type="reset" onClick={handleReset} disabled={isSubmitting}>
+          <button
+            className='login__btn'
+            type='reset'
+            onClick={handleReset}
+            disabled={isSubmitting}>
             reset
           </button>
         </div>
