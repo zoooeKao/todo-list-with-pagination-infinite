@@ -6,7 +6,8 @@
 
   &__container {
     width: 100%;
-    padding: 0 26px;
+    height: 100%;
+    padding: 0 20px;
   }
 
   &__layout {
@@ -16,8 +17,10 @@
   }
 
   &__left {
+    height: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     align-items: center;
   }
 
@@ -29,7 +32,11 @@
 
   &__icon {
     width: 30px;
-    height: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     margin-left: 10px;
 
     @include desktop {
@@ -38,8 +45,9 @@
   }
 
   &__greeting {
-    margin-left: 5px;
+    margin-left: 2px;
     font-size: 20px;
+    flex-shrink: 0;
   }
 
   &__logout {

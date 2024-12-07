@@ -20,7 +20,7 @@
     }
 
     @include desktop {
-      width: 33.3333%;
+      width: 50%;
     }
   }
 }
@@ -139,6 +139,9 @@
   &__btn {
     width: 50%;
     font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include tablet {
       font-size: 14px;

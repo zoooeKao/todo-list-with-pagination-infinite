@@ -22,12 +22,12 @@ export function Navbar({getTheme, getLayout}) {
     <nav className='navbar'>
       <div className='navbar__container navbar__layout'>
         <div className='navbar__left'>
-          <div>
-            <UilHome size='50' />
-          </div>
-          <div>
-            <span className='navbar__greeting'>Hello {profileState.status === 'logged-in' && `${profileState.username}`}</span>
-          </div>
+          {/* <div> */}
+          <UilHome size='60%' />
+          {/* </div> */}
+          {/* <div> */}
+          <span className='navbar__greeting'>Hello {profileState.status === 'logged-in' && `${profileState.username}`}</span>
+          {/* </div> */}
         </div>
         <div className='navbar__right'>
           <div
